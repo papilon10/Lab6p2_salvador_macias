@@ -4,6 +4,11 @@
  */
 package lab6p2_salvador_macias;
 
+import java.util.ArrayList;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JOptionPane;
+import javax.swing.SwingUtilities;
+
 /**
  *
  * @author Apple
@@ -15,6 +20,9 @@ public class principal extends javax.swing.JFrame {
      */
     public principal() {
         initComponents();
+        DefaultComboBoxModel modelo = new DefaultComboBoxModel();
+        cb_tienda.setModel(modelo);
+        cb_comprados.setModel(modelo);
     }
 
     /**
@@ -37,12 +45,18 @@ public class principal extends javax.swing.JFrame {
         Jigglypuff_boton = new javax.swing.JButton();
         boton_batalla = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        cb_tienda = new javax.swing.JComboBox<>();
         Comprar_boton = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
-        jComboBox2 = new javax.swing.JComboBox<>();
+        cb_comprados = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel1MouseClicked(evt);
+            }
+        });
 
         jLabel1.setText("Equipo disponible");
 
@@ -119,9 +133,19 @@ public class principal extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Pokemon", jPanel1);
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cb_tienda.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cb_tienda.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cb_tiendaActionPerformed(evt);
+            }
+        });
 
         Comprar_boton.setText("Comprar");
+        Comprar_boton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Comprar_botonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -129,7 +153,7 @@ public class principal extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(113, 113, 113)
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(cb_tienda, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 157, Short.MAX_VALUE)
                 .addComponent(Comprar_boton)
                 .addGap(186, 186, 186))
@@ -140,13 +164,13 @@ public class principal extends javax.swing.JFrame {
                 .addGap(53, 53, 53)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Comprar_boton)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cb_tienda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(304, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Tienda", jPanel2);
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cb_comprados.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -154,14 +178,14 @@ public class principal extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(233, 233, 233)
-                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(cb_comprados, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(283, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(58, 58, 58)
-                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(cb_comprados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(299, Short.MAX_VALUE))
         );
 
@@ -190,6 +214,25 @@ public class principal extends javax.swing.JFrame {
     private void Jigglypuff_botonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Jigglypuff_botonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Jigglypuff_botonActionPerformed
+
+    private void jPanel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MouseClicked
+        if (SwingUtilities.isRightMouseButton(evt)) {
+            JOptionPane.showMessageDialog(this, "el azul");
+        } else if (SwingUtilities.isLeftMouseButton(evt)) {
+            JOptionPane.showMessageDialog(this, "el negro");
+
+        }
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jPanel1MouseClicked
+
+    private void Comprar_botonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Comprar_botonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Comprar_botonActionPerformed
+
+    private void cb_tiendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb_tiendaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cb_tiendaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -235,12 +278,15 @@ public class principal extends javax.swing.JFrame {
     private javax.swing.JButton Psyduck_boton;
     private javax.swing.JButton Rayquaza_boton;
     private javax.swing.JButton boton_batalla;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
+    private javax.swing.JComboBox<String> cb_comprados;
+    private javax.swing.JComboBox<String> cb_tienda;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JTabbedPane jTabbedPane1;
     // End of variables declaration//GEN-END:variables
+    public static ArrayList<Pokemon> lista_pokemons = new ArrayList<>();
+    public static ArrayList<Items> lista_items = new ArrayList<>();
+
 }
