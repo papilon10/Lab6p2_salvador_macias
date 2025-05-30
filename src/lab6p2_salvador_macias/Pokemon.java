@@ -10,17 +10,17 @@ package lab6p2_salvador_macias;
  */
 public class Pokemon {
 
-    public String ataque;
-    public String ataqueEsp;
-    public String defensa;
-    public String defensaEsp;
-    public String velocida;
-    public String vida;
+    public int ataque;
+    public int ataqueEsp;
+    public int defensa;
+    public int defensaEsp;
+    public int velocida;
+    public int vida;
     public String nombre;
-    public String nivel;
+    public int nivel;
     public String naturaleza;
 
-    public Pokemon(String ataque, String ataqueEsp, String defensa, String defensaEsp, String velocida, String vida, String nombre, String nivel, String naturaleza) {
+    public Pokemon(int ataque, int ataqueEsp, int defensa, int defensaEsp, int velocida, int vida, String nombre, int nivel) {
         this.ataque = ataque;
         this.ataqueEsp = ataqueEsp;
         this.defensa = defensa;
@@ -32,63 +32,59 @@ public class Pokemon {
         this.naturaleza = naturaleza;
     }
 
-    public String getAtaque() {
+    public int getAtaque() {
         return ataque;
     }
 
-    public void setAtaque(String ataque) {
+    public void setAtaque(int ataque) {
         this.ataque = ataque;
     }
 
-    public String getAtaqueEsp() {
+    public int getAtaqueEsp() {
         return ataqueEsp;
     }
 
-    public void setAtaqueEsp(String ataqueEsp) {
+    public void setAtaqueEsp(int ataqueEsp) {
         this.ataqueEsp = ataqueEsp;
     }
 
-    public String getDefensa() {
+    public int getDefensa() {
         return defensa;
     }
 
-    public void setDefensa(String defensa) {
+    public void setDefensa(int defensa) {
         this.defensa = defensa;
     }
 
-    public String getDefensaEsp() {
+    public int getDefensaEsp() {
         return defensaEsp;
     }
 
-    public void setDefensaEsp(String defensaEsp) {
+    public void setDefensaEsp(int defensaEsp) {
         this.defensaEsp = defensaEsp;
     }
 
-    public String getVelocida() {
+    public int getVelocida() {
         return velocida;
     }
 
-    public void setVelocida(String velocida) {
+    public void setVelocida(int velocida) {
         this.velocida = velocida;
     }
 
-    public String getVida() {
+    public int getVida() {
         return vida;
     }
 
-    public void setVida(String vida) {
+    public void setVida(int vida) {
         this.vida = vida;
     }
 
-    public String getNombre() {
-        return nombre;
+    public int getNivel() {
+        return nivel;
     }
 
-    public void setNivel(String nivel) {
-        this.nivel = nivel;
-    }
-
-    public void getNivel(String nivel) {
+    public void setNivel(int nivel) {
         this.nivel = nivel;
     }
 
@@ -116,6 +112,7 @@ public class Pokemon {
     public static void SacarNaturaleza() {
     }
 
+    int vidaEstatica = getVida();
     @Override
     public String toString() {
         return "Nombre: " + nombre

@@ -5,6 +5,7 @@
 package lab6p2_salvador_macias;
 
 import java.util.ArrayList;
+import java.util.Random;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
@@ -22,7 +23,7 @@ public class principal extends javax.swing.JFrame {
         initComponents();
         DefaultComboBoxModel modelo = new DefaultComboBoxModel();
         DefaultComboBoxModel modelo_mochila = new DefaultComboBoxModel();
-
+        
         cb_tienda.setModel(modelo);
         cb_comprados.setModel(modelo_mochila);
         //  cb_comprados.setModel(modelo);
@@ -117,6 +118,11 @@ public class principal extends javax.swing.JFrame {
         });
 
         boton_batalla.setText("batalla");
+        boton_batalla.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton_batallaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -344,6 +350,26 @@ public class principal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_Comprar_botonMouseClicked
 
+    private void boton_batallaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton_batallaActionPerformed
+        Random aleatorio = new Random();
+        int digito = aleatorio.nextInt(11);
+        //  System.out.println(digito);
+        int vida_psy = Psyduck.getVida();
+        Psyduck.setVida(vida_psy - digito);
+        int vida_ray = Rayquaza.getVida();
+        Rayquaza.setVida(vida_ray - digito);
+        int vidaGardevoir = Gardevoir.getVida();
+        Gardevoir.setVida(vidaGardevoir - digito);
+        int vidaGengar = Gengar.getVida();
+        Gengar.setVida(vidaGengar - digito);
+        int vidaBlaziken = Blaziken.getVida();
+        Blaziken.setVida(vidaBlaziken - digito);
+        int vidaJigly = Jigglypuff.getVida();
+        Jigglypuff.setVida(vidaJigly - digito);
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boton_batallaActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -399,22 +425,24 @@ public class principal extends javax.swing.JFrame {
     public static ArrayList<Pokemon> lista_pokemons = new ArrayList<>();
     public static ArrayList lista_items = new ArrayList<>();
 
-    public static Pokemon Psyduck = new Pokemon("40", "50", "50","goku",
-            "60", "30", "30", "50", "Psyduck");
-    public static Pokemon Rayquaza = new Pokemon("40", "50", "50", "60", "30",
-            "30", "50","goku", "Rayquaza");
-    public static Pokemon Gardevoir = new Pokemon("40", "50", "50", "60",
-            "goku","30", "30", "50", "Gardevoir");
-    public static Pokemon Gengar = new Pokemon("40", "50", "50", "60",
-           "goku", "30", "30", "50", "Gengar");
-    public static Pokemon Blaziken = new Pokemon("40", "50", "50", "60"
-          ,"goku"  , "30", "30", "50", "Blaziken");
-    public static Pokemon Jigglypuff = new Pokemon("40", "50", "50", "60",
-            "goku","30", "30", "50", "Jigglypuff");
-
+    // public static Pokemon Psyduck = new Pokemon(40, 50, 50, 50,
+    //       "60", "30", "30", "50", "Psyduck");
+    // public static Pokemon Psyduck = new Pokemon(40, 50, 50, 60, 30, 40, 100, "Psyduck");
+    public static Pokemon Psyduck = new Pokemon(40, 50, 50, 60, 70, 100, "Psyduck", 5);
+    
+    public static Pokemon Rayquaza = new Pokemon(30, 60, 30, 80, 20, 100, "Rayquaza", 5);
+    
+    public static Pokemon Gardevoir = new Pokemon(50, 70, 30, 90, 30, 200, "Gardevoir", 5);
+    
+    public static Pokemon Gengar = new Pokemon(45, 90, 35, 70, 80, 200, "Gengar", 5);
+    
+    public static Pokemon Blaziken = new Pokemon(50, 100, 10, 20, 45, 100, "Blaziken", 5);
+    
+    public static Pokemon Jigglypuff = new Pokemon(80, 90, 20, 45, 100, 100, "Jigglypuff", 5);
+    
     public static Items Pocion = new Items("Pocion");
     public static Items MaxRevive = new Items("MaxRevive");
     public static Items Xspeed = new Items("Xspeed");
     public static Items Xattack = new Items("Xattack");
-
+    
 }
