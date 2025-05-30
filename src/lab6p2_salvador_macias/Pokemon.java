@@ -17,8 +17,9 @@ public class Pokemon {
     public String velocida;
     public String vida;
     public String nombre;
+    public String nivel;
 
-    public Pokemon(String ataque, String ataqueEsp, String defensa, String defensaEsp, String velocida, String vida, String nombre) {
+    public Pokemon(String ataque, String ataqueEsp, String defensa, String defensaEsp, String velocida, String vida, String nombre, String nivel) {
         this.ataque = ataque;
         this.ataqueEsp = ataqueEsp;
         this.defensa = defensa;
@@ -26,6 +27,7 @@ public class Pokemon {
         this.velocida = velocida;
         this.vida = vida;
         this.nombre = nombre;
+        this.nivel = nivel;
     }
 
     public String getAtaque() {
@@ -80,26 +82,34 @@ public class Pokemon {
         return nombre;
     }
 
+    public void setNivel(String nivel) {
+        this.nivel = nivel;
+    }
+
+    public void getNivel(String nivel) {
+        this.nivel = nivel;
+    }
+
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-    
-    public static void curarPokemon(){
+
+    public static void curarPokemon() {
     }
 
-    public static void SubirNivel(){
+    public static void SubirNivel() {
     }
-    
-    public static void QuitarVida(){
+
+    public static void QuitarVida() {
     }
-    
-    public static void SacarNaturaleza(){
+
+    public static void SacarNaturaleza() {
     }
-            
-            
+
     @Override
     public String toString() {
-        return "Pokemon{" + "ataque=" + ataque + ", ataqueEsp=" + ataqueEsp + ", defensa=" + defensa + ", defensaEsp=" + defensaEsp + ", velocida=" + velocida + ", vida=" + vida + ", nombre=" + nombre + '}';
+        return "Nombre: " + nombre
+                + "\nNivel: " + nivel;
     }
 
 }

@@ -133,32 +133,48 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Psyduck"/>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Psyduck_botonMouseClicked"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="Gengar_boton">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Gengar"/>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Gengar_botonMouseClicked"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="Rayquaza_boton">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Rayquaza"/>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Rayquaza_botonMouseClicked"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="Gardevoir_boton">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Gardevoir"/>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Gardevoir_botonMouseClicked"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="Blaziken_boton">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Blaziken"/>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Blaziken_botonMouseClicked"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="Jigglypuff_boton">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Jigglypuff"/>
               </Properties>
               <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Jigglypuff_botonMouseClicked"/>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Jigglypuff_botonActionPerformed"/>
               </Events>
             </Component>

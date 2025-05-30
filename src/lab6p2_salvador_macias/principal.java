@@ -61,16 +61,46 @@ public class principal extends javax.swing.JFrame {
         jLabel1.setText("Equipo disponible");
 
         Psyduck_boton.setText("Psyduck");
+        Psyduck_boton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Psyduck_botonMouseClicked(evt);
+            }
+        });
 
         Gengar_boton.setText("Gengar");
+        Gengar_boton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Gengar_botonMouseClicked(evt);
+            }
+        });
 
         Rayquaza_boton.setText("Rayquaza");
+        Rayquaza_boton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Rayquaza_botonMouseClicked(evt);
+            }
+        });
 
         Gardevoir_boton.setText("Gardevoir");
+        Gardevoir_boton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Gardevoir_botonMouseClicked(evt);
+            }
+        });
 
         Blaziken_boton.setText("Blaziken");
+        Blaziken_boton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Blaziken_botonMouseClicked(evt);
+            }
+        });
 
         Jigglypuff_boton.setText("Jigglypuff");
+        Jigglypuff_boton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Jigglypuff_botonMouseClicked(evt);
+            }
+        });
         Jigglypuff_boton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Jigglypuff_botonActionPerformed(evt);
@@ -216,12 +246,12 @@ public class principal extends javax.swing.JFrame {
     }//GEN-LAST:event_Jigglypuff_botonActionPerformed
 
     private void jPanel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MouseClicked
-        if (SwingUtilities.isRightMouseButton(evt)) {
+        /* if (SwingUtilities.isRightMouseButton(evt)) {
             JOptionPane.showMessageDialog(this, "el azul");
         } else if (SwingUtilities.isLeftMouseButton(evt)) {
             JOptionPane.showMessageDialog(this, "el negro");
 
-        }
+        }*/
 
         // TODO add your handling code here:
     }//GEN-LAST:event_jPanel1MouseClicked
@@ -233,6 +263,61 @@ public class principal extends javax.swing.JFrame {
     private void cb_tiendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb_tiendaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cb_tiendaActionPerformed
+
+    private void Psyduck_botonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Psyduck_botonMouseClicked
+        if (SwingUtilities.isRightMouseButton(evt)) {
+            JOptionPane.showMessageDialog(this, "Estadisticas\n\n" + Psyduck.toString());//lista_pokemons.get(0).toString());
+        } else if (SwingUtilities.isLeftMouseButton(evt)) {
+            JOptionPane.showMessageDialog(this, "el negro");
+        }
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Psyduck_botonMouseClicked
+
+    private void Rayquaza_botonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Rayquaza_botonMouseClicked
+        if (SwingUtilities.isRightMouseButton(evt)) {
+            JOptionPane.showMessageDialog(this, "Estadisticas\n\n" + Rayquaza.toString());
+        } else if (SwingUtilities.isLeftMouseButton(evt)) {
+            JOptionPane.showMessageDialog(this, "el negro");
+        }
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Rayquaza_botonMouseClicked
+
+    private void Gardevoir_botonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Gardevoir_botonMouseClicked
+        if (SwingUtilities.isRightMouseButton(evt)) {
+            JOptionPane.showMessageDialog(this, "Estadisticas\n\n" + Gardevoir.toString());
+        } else if (SwingUtilities.isLeftMouseButton(evt)) {
+            JOptionPane.showMessageDialog(this, "el negro");
+        }
+// TODO add your handling code here:
+    }//GEN-LAST:event_Gardevoir_botonMouseClicked
+
+    private void Gengar_botonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Gengar_botonMouseClicked
+        if (SwingUtilities.isRightMouseButton(evt)) {
+            JOptionPane.showMessageDialog(this, "Estadisticas\n\n" + Gengar.toString());
+        } else if (SwingUtilities.isLeftMouseButton(evt)) {
+            JOptionPane.showMessageDialog(this, "el negro");
+        }
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Gengar_botonMouseClicked
+
+    private void Blaziken_botonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Blaziken_botonMouseClicked
+        if (SwingUtilities.isRightMouseButton(evt)) {
+            JOptionPane.showMessageDialog(this, "Estadisticas\n\n" + Blaziken.toString());
+        } else if (SwingUtilities.isLeftMouseButton(evt)) {
+            JOptionPane.showMessageDialog(this, "el negro");
+        }
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Blaziken_botonMouseClicked
+
+    private void Jigglypuff_botonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Jigglypuff_botonMouseClicked
+        if (SwingUtilities.isRightMouseButton(evt)) {
+            JOptionPane.showMessageDialog(this, "Estadisticas\n\n" + Jigglypuff.toString());
+        } else if (SwingUtilities.isLeftMouseButton(evt)) {
+            JOptionPane.showMessageDialog(this, "el negro");
+        }
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Jigglypuff_botonMouseClicked
 
     /**
      * @param args the command line arguments
@@ -288,5 +373,11 @@ public class principal extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
     public static ArrayList<Pokemon> lista_pokemons = new ArrayList<>();
     public static ArrayList<Items> lista_items = new ArrayList<>();
+    public static Pokemon Psyduck = new Pokemon("40", "50", "50", "60", "30", "30", "50", "Psyduck");
+    public static Pokemon Rayquaza = new Pokemon("40", "50", "50", "60", "30", "30", "50", "Rayquaza");
+    public static Pokemon Gardevoir = new Pokemon("40", "50", "50", "60", "30", "30", "50", "Gardevoir");
+    public static Pokemon Gengar = new Pokemon("40", "50", "50", "60", "30", "30", "50", "Gengar");
+    public static Pokemon Blaziken = new Pokemon("40", "50", "50", "60", "30", "30", "50", "Blaziken");
+    public static Pokemon Jigglypuff = new Pokemon("40", "50", "50", "60", "30", "30", "50", "Jigglypuff");
 
 }
