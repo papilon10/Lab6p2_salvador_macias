@@ -7,6 +7,7 @@ package lab6p2_salvador_macias;
 import java.util.ArrayList;
 import java.util.Random;
 import javax.swing.DefaultComboBoxModel;
+import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 
@@ -23,7 +24,7 @@ public class principal extends javax.swing.JFrame {
         initComponents();
         DefaultComboBoxModel modelo = new DefaultComboBoxModel();
         DefaultComboBoxModel modelo_mochila = new DefaultComboBoxModel();
-        
+
         cb_tienda.setModel(modelo);
         cb_comprados.setModel(modelo_mochila);
         //  cb_comprados.setModel(modelo);
@@ -33,6 +34,8 @@ public class principal extends javax.swing.JFrame {
         modeoCasteado.addElement(MaxRevive.getNombre());
         modeoCasteado.addElement(Xattack.getNombre());
         modeoCasteado.addElement(Xspeed.getNombre());
+        modeoCasteado.addElement(RareCandy.getNombre());
+
     }
 
     /**
@@ -289,7 +292,34 @@ public class principal extends javax.swing.JFrame {
         if (SwingUtilities.isRightMouseButton(evt)) {
             JOptionPane.showMessageDialog(this, "Estadisticas\n\n" + Psyduck.toString());//lista_pokemons.get(0).toString());
         } else if (SwingUtilities.isLeftMouseButton(evt)) {
-            JOptionPane.showMessageDialog(this, "el negro");
+            JOptionPane.showMessageDialog(this, "se actualizaron las estadisticas");
+
+            if (cb_comprados.getSelectedItem().equals(Pocion)) {
+                int i = Psyduck.getVida();
+                Psyduck.setVida(i + 20);
+                cb_comprados.removeItem(Pocion);
+
+            } else if (cb_comprados.getSelectedItem().equals(MaxRevive)) {
+                Psyduck.setVida(100);
+                cb_comprados.removeItem(MaxRevive);
+
+            } else if (cb_comprados.getSelectedItem().equals(Xspeed)) {
+                int i = Psyduck.getVelocida();
+                Psyduck.setVelocida(i + 15);
+                cb_comprados.removeItem(Xspeed);
+
+            } else if (cb_comprados.getSelectedItem().equals(Xattack)) {
+                int i = Psyduck.getAtaque();
+                Psyduck.setAtaque(i + 10);
+                cb_comprados.removeItem(Xattack);
+
+            } else if (cb_comprados.getSelectedItem().equals(RareCandy)) {
+                int i = Psyduck.getNivel();
+                Psyduck.setNivel(i + 3);
+                cb_comprados.removeItem(RareCandy);
+
+            }
+
         }
 
         // TODO add your handling code here:
@@ -299,7 +329,32 @@ public class principal extends javax.swing.JFrame {
         if (SwingUtilities.isRightMouseButton(evt)) {
             JOptionPane.showMessageDialog(this, "Estadisticas\n\n" + Rayquaza.toString());
         } else if (SwingUtilities.isLeftMouseButton(evt)) {
-            JOptionPane.showMessageDialog(this, "el negro");
+            JOptionPane.showMessageDialog(this, "se actualizaron las estadisticas");
+            if (cb_comprados.getSelectedItem().equals(Pocion)) {
+                int i = Rayquaza.getVida();
+                Rayquaza.setVida(i + 20);
+                cb_comprados.removeItem(Pocion);
+
+            } else if (cb_comprados.getSelectedItem().equals(MaxRevive)) {
+                Rayquaza.setVida(100);
+                cb_comprados.removeItem(MaxRevive);
+
+            } else if (cb_comprados.getSelectedItem().equals(Xspeed)) {
+                int i = Rayquaza.getVelocida();
+                Rayquaza.setVelocida(i + 15);
+                cb_comprados.removeItem(Xspeed);
+
+            } else if (cb_comprados.getSelectedItem().equals(Xattack)) {
+                int i = Rayquaza.getAtaque();
+                Rayquaza.setAtaque(i + 10);
+                cb_comprados.removeItem(Xattack);
+
+            } else if (cb_comprados.getSelectedItem().equals(RareCandy)) {
+                int i = Rayquaza.getNivel();
+                Rayquaza.setNivel(i + 3);
+                cb_comprados.removeItem(RareCandy);
+
+            }
         }
         // TODO add your handling code here:
     }//GEN-LAST:event_Rayquaza_botonMouseClicked
@@ -308,7 +363,33 @@ public class principal extends javax.swing.JFrame {
         if (SwingUtilities.isRightMouseButton(evt)) {
             JOptionPane.showMessageDialog(this, "Estadisticas\n\n" + Gardevoir.toString());
         } else if (SwingUtilities.isLeftMouseButton(evt)) {
-            JOptionPane.showMessageDialog(this, "el negro");
+            JOptionPane.showMessageDialog(this, "se actualizaron las estadisticas");
+            if (cb_comprados.getSelectedItem().equals(Pocion)) {
+                int i = Gardevoir.getVida();
+                Gardevoir.setVida(i + 20);
+                cb_comprados.removeItem(Pocion);
+
+            } else if (cb_comprados.getSelectedItem().equals(MaxRevive)) {
+                Gardevoir.setVida(100);
+                cb_comprados.removeItem(MaxRevive);
+
+            } else if (cb_comprados.getSelectedItem().equals(Xspeed)) {
+                int i = Gardevoir.getVelocida();
+                Gardevoir.setVelocida(i + 15);
+                cb_comprados.removeItem(Xspeed);
+
+            } else if (cb_comprados.getSelectedItem().equals(Xattack)) {
+                int i = Gardevoir.getAtaque();
+                Gardevoir.setAtaque(i + 10);
+                cb_comprados.removeItem(Xattack);
+
+            } else if (cb_comprados.getSelectedItem().equals(RareCandy)) {
+                int i = Gardevoir.getNivel();
+                Gardevoir.setNivel(i + 3);
+                cb_comprados.removeItem(RareCandy);
+
+            }
+
         }
 // TODO add your handling code here:
     }//GEN-LAST:event_Gardevoir_botonMouseClicked
@@ -317,7 +398,32 @@ public class principal extends javax.swing.JFrame {
         if (SwingUtilities.isRightMouseButton(evt)) {
             JOptionPane.showMessageDialog(this, "Estadisticas\n\n" + Gengar.toString());
         } else if (SwingUtilities.isLeftMouseButton(evt)) {
-            JOptionPane.showMessageDialog(this, "el negro");
+            JOptionPane.showMessageDialog(this, "se actualizaron las estadisticas");
+            if (cb_comprados.getSelectedItem().equals(Pocion)) {
+                int i = Gengar.getVida();
+                Gengar.setVida(i + 20);
+                cb_comprados.removeItem(Pocion);
+
+            } else if (cb_comprados.getSelectedItem().equals(MaxRevive)) {
+                Gengar.setVida(100);
+                cb_comprados.removeItem(MaxRevive);
+
+            } else if (cb_comprados.getSelectedItem().equals(Xspeed)) {
+                int i = Gengar.getVelocida();
+                Gengar.setVelocida(i + 15);
+                cb_comprados.removeItem(Xspeed);
+
+            } else if (cb_comprados.getSelectedItem().equals(Xattack)) {
+                int i = Gengar.getAtaque();
+                Gengar.setAtaque(i + 10);
+                cb_comprados.removeItem(Xattack);
+
+            } else if (cb_comprados.getSelectedItem().equals(RareCandy)) {
+                int i = Gengar.getNivel();
+                Gengar.setNivel(i + 3);
+                cb_comprados.removeItem(RareCandy);
+
+            }
         }
         // TODO add your handling code here:
     }//GEN-LAST:event_Gengar_botonMouseClicked
@@ -326,7 +432,32 @@ public class principal extends javax.swing.JFrame {
         if (SwingUtilities.isRightMouseButton(evt)) {
             JOptionPane.showMessageDialog(this, "Estadisticas\n\n" + Blaziken.toString());
         } else if (SwingUtilities.isLeftMouseButton(evt)) {
-            JOptionPane.showMessageDialog(this, "el negro");
+            JOptionPane.showMessageDialog(this, "se actualizaron las estadisticas");
+            if (cb_comprados.getSelectedItem().equals(Pocion)) {
+                int i = Blaziken.getVida();
+                Blaziken.setVida(i + 20);
+                cb_comprados.removeItem(Pocion);
+
+            } else if (cb_comprados.getSelectedItem().equals(MaxRevive)) {
+                Blaziken.setVida(100);
+                cb_comprados.removeItem(MaxRevive);
+
+            } else if (cb_comprados.getSelectedItem().equals(Xspeed)) {
+                int i = Blaziken.getVelocida();
+                Blaziken.setVelocida(i + 15);
+                cb_comprados.removeItem(Xspeed);
+
+            } else if (cb_comprados.getSelectedItem().equals(Xattack)) {
+                int i = Blaziken.getAtaque();
+                Blaziken.setAtaque(i + 10);
+                cb_comprados.removeItem(Xattack);
+
+            } else if (cb_comprados.getSelectedItem().equals(RareCandy)) {
+                int i = Blaziken.getNivel();
+                Blaziken.setNivel(i + 3);
+                cb_comprados.removeItem(RareCandy);
+
+            }
         }
         // TODO add your handling code here:
     }//GEN-LAST:event_Blaziken_botonMouseClicked
@@ -335,7 +466,32 @@ public class principal extends javax.swing.JFrame {
         if (SwingUtilities.isRightMouseButton(evt)) {
             JOptionPane.showMessageDialog(this, "Estadisticas\n\n" + Jigglypuff.toString());
         } else if (SwingUtilities.isLeftMouseButton(evt)) {
-            JOptionPane.showMessageDialog(this, "el negro");
+            JOptionPane.showMessageDialog(this, "se actualizaron las estadisticas");
+            if (cb_comprados.getSelectedItem().equals(Pocion)) {
+                int i = Jigglypuff.getVida();
+                Jigglypuff.setVida(i + 20);
+                cb_comprados.removeItem(Pocion);
+
+            } else if (cb_comprados.getSelectedItem().equals(MaxRevive)) {
+                Jigglypuff.setVida(100);
+                cb_comprados.removeItem(MaxRevive);
+
+            } else if (cb_comprados.getSelectedItem().equals(Xspeed)) {
+                int i = Jigglypuff.getVelocida();
+                Jigglypuff.setVelocida(i + 15);
+                cb_comprados.removeItem(Xspeed);
+
+            } else if (cb_comprados.getSelectedItem().equals(Xattack)) {
+                int i = Jigglypuff.getAtaque();
+                Jigglypuff.setAtaque(i + 10);
+                cb_comprados.removeItem(Xattack);
+
+            } else if (cb_comprados.getSelectedItem().equals(RareCandy)) {
+                int i = Jigglypuff.getNivel();
+                Jigglypuff.setNivel(i + 3);
+                cb_comprados.removeItem(RareCandy);
+
+            }
         }
         // TODO add your handling code here:
     }//GEN-LAST:event_Jigglypuff_botonMouseClicked
@@ -369,6 +525,38 @@ public class principal extends javax.swing.JFrame {
 
         // TODO add your handling code here:
     }//GEN-LAST:event_boton_batallaActionPerformed
+
+    public static void Pocion_psy() {
+
+        int vida_psy = Psyduck.getVida();
+        Psyduck.setVida(vida_psy + 20);
+    }
+
+    public static void pocion_ray() {
+        int vida_ray = Rayquaza.getVida();
+        Rayquaza.setVida(vida_ray + 20);
+    }
+
+    public static void pocion_garde() {
+        int vidaGardevoir = Gardevoir.getVida();
+        Gardevoir.setVida(vidaGardevoir + 20);
+
+    }
+
+    public static void pocion_gengar() {
+        int vidaGengar = Gengar.getVida();
+        Gengar.setVida(vidaGengar + 20);
+    }
+
+    public static void pocion_blaziquen() {
+        int vidaBlaziken = Blaziken.getVida();
+        Blaziken.setVida(vidaBlaziken + 20);
+    }
+
+    public static void pocion_jiggly() {
+        int vidaJigly = Jigglypuff.getVida();
+        Jigglypuff.setVida(vidaJigly + 20);
+    }
 
     /**
      * @param args the command line arguments
@@ -429,20 +617,21 @@ public class principal extends javax.swing.JFrame {
     //       "60", "30", "30", "50", "Psyduck");
     // public static Pokemon Psyduck = new Pokemon(40, 50, 50, 60, 30, 40, 100, "Psyduck");
     public static Pokemon Psyduck = new Pokemon(40, 50, 50, 60, 70, 100, "Psyduck", 5);
-    
+
     public static Pokemon Rayquaza = new Pokemon(30, 60, 30, 80, 20, 100, "Rayquaza", 5);
-    
+
     public static Pokemon Gardevoir = new Pokemon(50, 70, 30, 90, 30, 200, "Gardevoir", 5);
-    
+
     public static Pokemon Gengar = new Pokemon(45, 90, 35, 70, 80, 200, "Gengar", 5);
-    
+
     public static Pokemon Blaziken = new Pokemon(50, 100, 10, 20, 45, 100, "Blaziken", 5);
-    
+
     public static Pokemon Jigglypuff = new Pokemon(80, 90, 20, 45, 100, 100, "Jigglypuff", 5);
-    
+
     public static Items Pocion = new Items("Pocion");
     public static Items MaxRevive = new Items("MaxRevive");
     public static Items Xspeed = new Items("Xspeed");
     public static Items Xattack = new Items("Xattack");
-    
+    public static Items RareCandy = new Items("Rare candy");
+
 }

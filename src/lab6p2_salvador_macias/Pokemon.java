@@ -4,6 +4,8 @@
  */
 package lab6p2_salvador_macias;
 
+import java.util.Random;
+
 /**
  *
  * @author Apple
@@ -19,6 +21,10 @@ public class Pokemon {
     public String nombre;
     public int nivel;
     public String naturaleza;
+
+    public Pokemon(String naturaleza) {
+        this.naturaleza = naturaleza;
+    }
 
     public Pokemon(int ataque, int ataqueEsp, int defensa, int defensaEsp, int velocida, int vida, String nombre, int nivel) {
         this.ataque = ataque;
@@ -97,7 +103,30 @@ public class Pokemon {
     }
 
     public void setNaturaleza(String naturaleza) {
-        this.naturaleza = naturaleza;
+        Random aleatorio = new Random();
+        int digito = aleatorio.nextInt(5);
+       switch (digito) {
+            case 1:
+                setNaturaleza("Adamant");
+
+                break;
+            case 2:
+                setNaturaleza("Timid");
+                break;
+            case 3:
+                setNaturaleza("Modest");
+                break;
+            case 4:
+                setNaturaleza("Jolly");
+
+                break;
+            case 5:
+                setNaturaleza("Naive");
+                break;
+            default:
+                throw new AssertionError();
+        }
+       
     }
 
     public static void curarPokemon() {
@@ -109,10 +138,36 @@ public class Pokemon {
     public static void QuitarVida() {
     }
 
+    //Pokemon p = new Pokemon(naturaleza);
     public static void SacarNaturaleza() {
+
+        Random aleatorio = new Random();
+        int digito = aleatorio.nextInt(5);
+       /* switch (digito) {
+            case 1:
+                //this.setNaturaleza("Adamant");
+
+                break;
+            case 2:
+                //  p.setNaturaleza("Timid");
+                break;
+            case 3:
+                /// p.setNaturaleza("Modest");
+                break;
+            case 4:
+                // p.setNaturaleza("Jolly");
+
+                break;
+            case 5:
+                //p.setNaturaleza("Naive");
+                break;
+            default:
+                throw new AssertionError();
+        }*/
     }
 
     int vidaEstatica = getVida();
+
     @Override
     public String toString() {
         return "Nombre: " + nombre
