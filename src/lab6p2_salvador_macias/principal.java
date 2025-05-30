@@ -399,12 +399,18 @@ public class principal extends javax.swing.JFrame {
     public static ArrayList<Pokemon> lista_pokemons = new ArrayList<>();
     public static ArrayList lista_items = new ArrayList<>();
 
-    public static Pokemon Psyduck = new Pokemon("40", "50", "50", "60", "30", "30", "50", "Psyduck");
-    public static Pokemon Rayquaza = new Pokemon("40", "50", "50", "60", "30", "30", "50", "Rayquaza");
-    public static Pokemon Gardevoir = new Pokemon("40", "50", "50", "60", "30", "30", "50", "Gardevoir");
-    public static Pokemon Gengar = new Pokemon("40", "50", "50", "60", "30", "30", "50", "Gengar");
-    public static Pokemon Blaziken = new Pokemon("40", "50", "50", "60", "30", "30", "50", "Blaziken");
-    public static Pokemon Jigglypuff = new Pokemon("40", "50", "50", "60", "30", "30", "50", "Jigglypuff");
+    public static Pokemon Psyduck = new Pokemon("40", "50", "50","goku",
+            "60", "30", "30", "50", "Psyduck");
+    public static Pokemon Rayquaza = new Pokemon("40", "50", "50", "60", "30",
+            "30", "50","goku", "Rayquaza");
+    public static Pokemon Gardevoir = new Pokemon("40", "50", "50", "60",
+            "goku","30", "30", "50", "Gardevoir");
+    public static Pokemon Gengar = new Pokemon("40", "50", "50", "60",
+           "goku", "30", "30", "50", "Gengar");
+    public static Pokemon Blaziken = new Pokemon("40", "50", "50", "60"
+          ,"goku"  , "30", "30", "50", "Blaziken");
+    public static Pokemon Jigglypuff = new Pokemon("40", "50", "50", "60",
+            "goku","30", "30", "50", "Jigglypuff");
 
     public static Items Pocion = new Items("Pocion");
     public static Items MaxRevive = new Items("MaxRevive");
