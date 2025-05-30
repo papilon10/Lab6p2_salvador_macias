@@ -21,8 +21,17 @@ public class principal extends javax.swing.JFrame {
     public principal() {
         initComponents();
         DefaultComboBoxModel modelo = new DefaultComboBoxModel();
+        DefaultComboBoxModel modelo_mochila = new DefaultComboBoxModel();
+
         cb_tienda.setModel(modelo);
-        cb_comprados.setModel(modelo);
+        cb_comprados.setModel(modelo_mochila);
+        //  cb_comprados.setModel(modelo);
+
+        DefaultComboBoxModel modeoCasteado = (DefaultComboBoxModel) cb_tienda.getModel();
+        modeoCasteado.addElement(Pocion.getNombre());
+        modeoCasteado.addElement(MaxRevive.getNombre());
+        modeoCasteado.addElement(Xattack.getNombre());
+        modeoCasteado.addElement(Xspeed.getNombre());
     }
 
     /**
@@ -261,6 +270,7 @@ public class principal extends javax.swing.JFrame {
     }//GEN-LAST:event_Comprar_botonActionPerformed
 
     private void cb_tiendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb_tiendaActionPerformed
+
         // TODO add your handling code here:
     }//GEN-LAST:event_cb_tiendaActionPerformed
 
@@ -373,11 +383,17 @@ public class principal extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
     public static ArrayList<Pokemon> lista_pokemons = new ArrayList<>();
     public static ArrayList<Items> lista_items = new ArrayList<>();
+
     public static Pokemon Psyduck = new Pokemon("40", "50", "50", "60", "30", "30", "50", "Psyduck");
     public static Pokemon Rayquaza = new Pokemon("40", "50", "50", "60", "30", "30", "50", "Rayquaza");
     public static Pokemon Gardevoir = new Pokemon("40", "50", "50", "60", "30", "30", "50", "Gardevoir");
     public static Pokemon Gengar = new Pokemon("40", "50", "50", "60", "30", "30", "50", "Gengar");
     public static Pokemon Blaziken = new Pokemon("40", "50", "50", "60", "30", "30", "50", "Blaziken");
     public static Pokemon Jigglypuff = new Pokemon("40", "50", "50", "60", "30", "30", "50", "Jigglypuff");
+
+    public static Items Pocion = new Items("Pocion");
+    public static Items MaxRevive = new Items("MaxRevive");
+    public static Items Xspeed = new Items("Xspeed");
+    public static Items Xattack = new Items("Xattack");
 
 }

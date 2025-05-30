@@ -12,6 +12,10 @@ public class Items {
 
     public String nombre;
 
+    public Items(String nombre) {
+        this.nombre = nombre;
+    }
+
     public static void EfectoPokemon() {
     }
 
