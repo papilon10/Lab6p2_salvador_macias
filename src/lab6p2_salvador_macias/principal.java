@@ -180,6 +180,11 @@ public class principal extends javax.swing.JFrame {
         });
 
         Comprar_boton.setText("Comprar");
+        Comprar_boton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Comprar_botonMouseClicked(evt);
+            }
+        });
         Comprar_boton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Comprar_botonActionPerformed(evt);
@@ -329,6 +334,16 @@ public class principal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_Jigglypuff_botonMouseClicked
 
+    private void Comprar_botonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Comprar_botonMouseClicked
+        cb_tienda.getSelectedItem();
+        Object objeto = cb_tienda.getSelectedItem();
+        DefaultComboBoxModel casteado_comprados = (DefaultComboBoxModel) cb_comprados.getModel();
+        lista_items.add(objeto);
+        casteado_comprados.addElement(objeto);
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Comprar_botonMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -382,7 +397,7 @@ public class principal extends javax.swing.JFrame {
     private javax.swing.JTabbedPane jTabbedPane1;
     // End of variables declaration//GEN-END:variables
     public static ArrayList<Pokemon> lista_pokemons = new ArrayList<>();
-    public static ArrayList<Items> lista_items = new ArrayList<>();
+    public static ArrayList lista_items = new ArrayList<>();
 
     public static Pokemon Psyduck = new Pokemon("40", "50", "50", "60", "30", "30", "50", "Psyduck");
     public static Pokemon Rayquaza = new Pokemon("40", "50", "50", "60", "30", "30", "50", "Rayquaza");
